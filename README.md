@@ -55,8 +55,6 @@ Quizera is built using modern, powerful technologies to ensure a scalable and ma
 *   **Styling**: A combination of CSS-in-JS (style objects) and global CSS with variables for a consistent and themeable design.
 *   **Icons**: [React Icons](https://react-icons.github.io/react-icons/) for a rich set of UI icons.
 
-================================================================================
-
 ## ⚙️ Getting Started
 
 To get the project up and running on your local machine, follow these steps.
