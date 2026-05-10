@@ -1,0 +1,65 @@
+/* Button hover effects for ManageQuiz page */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Back Button Hover */
+button[style*="background: rgb(245, 245, 245)"]:hover {
+  background: #e8e8e8 !important;
+  border-color: #bbb !important;
+  transform: translateX(-2px) !important;
+}
+
+button[style*="background: rgb(245, 245, 245)"]:active {
+  background: #ddd !important;
+  transform: translateX(0) !important;
+}
+
+/* Primary Button Hover */
+button[style*="linear-gradient(135deg, #1976d2"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4) !important;
+}
+
+button[style*="linear-gradient(135deg, #1976d2"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3) !important;
+}
+
+/* Danger Button Hover */
+button[style*="linear-gradient(135deg, #f44336"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4) !important;
+}
+
+button[style*="linear-gradient(135deg, #f44336"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3) !important;
+}
+
+/* Warning Button Hover */
+button[style*="linear-gradient(135deg, #ff9800"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4) !important;
+}
+
+button[style*="linear-gradient(135deg, #ff9800"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+/* Success Button Hover */
+button[style*="linear-gradient(135deg, #4caf50"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+button[style*="linear-gradient(135deg, #4caf50"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+}

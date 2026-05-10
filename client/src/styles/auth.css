@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  padding: 45px 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+.field-error {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.field-error::before {
+  content: "* ";
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.password-wrapper {
+  position: relative;
+}
+.password-input {
+  padding-right: 44px; /* room for the toggle button */
+}
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* ensure it's above input's focus shadow */
+  box-shadow: none;
+  line-height: 0; /* prevent baseline shifts */
+  transform-origin: center center;
+  -webkit-tap-highlight-color: transparent;
+}
+.password-toggle:focus {
+  outline: none;
+}
+
+/* make sure the toggle itself doesn't pick up the input box-shadow */
+.password-wrapper .password-toggle svg {
+  display: block;
+}
+
+/* Disable global button hover/active effects for the small inline toggle */
+.password-toggle:hover,
+.password-toggle:active,
+.password-toggle:focus {
+  transform: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Ensure nothing animates or shifts for this inline toggle */
+.password-toggle {
+  transition: none !important;
+  transform: translateY(-50%) !important; /* keep vertical center */
+  margin: 0 !important;
+}
+.password-toggle:hover {
+  transform: translateY(-50%) !important;
+}
+
+.password-toggle svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.show-password-row {
+  margin-top: 10px;
+  /* align the checkbox row visually with the input text */
+  padding-left: 6px;
+  font-size: 14px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.show-password-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  color: inherit;
+}
+
+.show-password-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  /* Use accent-color for modern browsers to tint the checkbox */
+  accent-color: #667eea;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  box-shadow: none;
+}
+
+.show-password-row input[type="checkbox"]:focus {
+  outline: 2px solid rgba(102,126,234,0.16);
+  outline-offset: 2px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.login-btn {
+  margin-top: 8px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  color: #334155;
+  border: 2px solid #e2e8f0;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+.google-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.google-icon {
+  font-size: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider span {
+  padding: 0 15px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.link-btn {
+  background: none;
+  color: #667eea;
+  padding: 0;
+  font-size: 14px;
+  width: auto;
+  box-shadow: none;
+}
+
+.link-btn:hover {
+  background: none;
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
+}
+
+.forgot-link {
+  margin-top: 20px;
+}
+
+.forgot-desc {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.forgot-sent {
+  color: #0f172a;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #fef2f2;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #fecaca;
+}
+
+.link {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.link a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 35px 25px;
+  }
+  
+  .auth-title {
+    font-size: 24px;
+  }
+  
+  .auth-subtitle {
+    font-size: 14px;
+  }
+}
