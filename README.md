@@ -1,10 +1,8 @@
-# Quizera
-A Complete Platform For Quiz
-# Quizera - The Ultimate Quiz Platform
+# Quizera - A Complete Platform For Quiz
 
 Quizera is a dynamic and feature-rich full-stack web application designed for creating, managing, and taking quizzes. Built with the MERN stack, it provides a seamless experience for both quiz creators and participants, offering a robust set of tools for educational, professional, or recreational use.
 
-## ✨ Key Features
+## Key Features
 
 Quizera is divided into two main user experiences: the **Creator Dashboard** and the **Participant Dashboard**.
 
@@ -35,7 +33,7 @@ Quizera is divided into two main user experiences: the **Creator Dashboard** and
 *   **Instant Feedback**: View detailed results and answer breakdowns immediately after the creator publishes them.
 *   **Performance Tracking**: Access analytics within "Vaults" to see your performance in groups of related quizzes.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 Quizera is built using modern, powerful technologies to ensure a scalable and maintainable application.
 
